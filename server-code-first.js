@@ -3,9 +3,13 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 
 // Step 1: Define schema (GraphQL type definitions)
 const typeDefs = `#graphql
-  type Query {
-    greeting: String
-  }
+    schema {
+        query: Query
+    }
+
+    type Query {
+        greeting: String
+    }
 `;
 
 // Step 2: Define resolvers
